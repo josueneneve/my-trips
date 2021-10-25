@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 type ImageProps = {
   url: string
   height: number
@@ -25,7 +23,8 @@ export default function PlacesTemplate({ place }: PlacesTemplateProps) {
       <div dangerouslySetInnerHTML={{ __html: place.description.html }} />
 
       {place.gallery.map((image, index) => (
-        <Image key={`photo-${index}`} src={image.url} alt={place.name} />
+        // eslint-disable-next-line @next/next/no-img-element
+        <img key={`photo-${index}`} src={image.url} alt={place.name} />
       ))}
     </>
   )
