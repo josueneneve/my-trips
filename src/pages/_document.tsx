@@ -1,3 +1,4 @@
+import Analytics from 'components/Analytics'
 // eslint-disable-next-line @next/next/no-document-import-in-page
 import Document, {
   Html,
@@ -44,6 +45,7 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <Analytics />
         </body>
       </Html>
     )
